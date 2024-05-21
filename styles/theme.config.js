@@ -46,6 +46,7 @@ const dark = {
     img: {
         filter: 'invert(1)'
     },
+
     // ...
 }
 

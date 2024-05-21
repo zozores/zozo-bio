@@ -9,6 +9,7 @@ import Link from "next/link";
 import { ChevronRightIcon, HexIcon, HomeIcon, TwitterIcon, NewUp, OvalIcon } from './icons';
 import allLinks from "../data/LinksData";
 import bioData from "../data/BioData";
+import useDarkMode from "use-dark-mode";
 
 
 
@@ -16,6 +17,7 @@ const Links = () => {
 
   // all user info from bioData
   const name = bioData[0].name;
+  const emoji = bioData[0].emoji;
   const url = bioData[0].url;
   const username = bioData[0].username;
   const titleImg = bioData[0].titleImg;
@@ -41,7 +43,11 @@ const Links = () => {
   const newProduct = bioData[0].newProduct; // checking for newProduct flag true false
   const newProductUrl = bioData[0].newProductUrl; // get product url if available
 
+  const darkMode = useDarkMode(true)
 
+  const handleToggle = () => {
+    darkMode.toggle();
+  };
 
   // Collect all links filter by type - social, project, nft and other etc=
   // get data for social section
@@ -52,6 +58,11 @@ const Links = () => {
   // Get data for install section
   const install = allLinks.filter((el) => {
     return el.type === "install" && el.on
+  });
+
+  // Get data for projects section
+   const projects = allLinks.filter((el) => {
+    return el.type === "projects" && el.on
   });
 
   // Get data for nfts
@@ -68,6 +79,9 @@ const Links = () => {
       <LinkWrapper>
         <LinkContainer>
           <TopPart>
+            <button onClick={handleToggle}>
+              {darkMode.value ? "☀" : "☾"}
+            </button>
             <LinkHeader>
               <Avatar>
                 <AvatarWrap>
@@ -92,6 +106,7 @@ const Links = () => {
                 {
                   username ? <h3><a href={`${url}`}>{username}</a></h3> : ''
                 }
+                <p>{emoji}</p>
               </Title>
             </LinkHeader>
 
@@ -129,6 +144,26 @@ const Links = () => {
                       <h3>{install[0].type}</h3>
                       {
                         install.map((i) => {
+                          return (
+                              <a href={i.url} key={i.title} target="_blank" rel="noreferrer">
+                                <LinkBox>
+                                  <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} /> {i.title}</LinkTitle> <NewUp />
+                                </LinkBox>
+                              </a>
+                          )
+                        })
+                      }
+                    </LinkSection> : ''
+              }
+              {/* End Install Section */}
+
+              {/* Projects Section */}
+              {
+                projects.length > 0 ?
+                    <LinkSection>
+                      <h3>{projects[0].type}</h3>
+                      {
+                        projects.map((i) => {
                           return (
                               <a href={i.url} key={i.title} target="_blank" rel="noreferrer">
                                 <LinkBox>
@@ -273,7 +308,7 @@ const Title = styled.div`
       font-weight: 700;
       
       letter-spacing: -2px;
-      background: linear-gradient(90deg, #4AB1F1 5.71%, #566CEC 33.77%, #D749AF 61.82%, #FF7C51 91.21%);
+      background: ${({ theme }) => theme.text.primary};
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;

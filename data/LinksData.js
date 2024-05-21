@@ -2,161 +2,87 @@
 const webLinks = [
     // All social profile
     {
-        title: 'Twitter',
-        url: 'https://twitter.com/realvjy',
+        title: 'Codeberg',
+        url: 'https://codeberg.org/zozores',
         type: 'social',
-        icon: '/twitter.svg',
+        icon: '/codeberg.svg',
         on: true
-    },
-    {
-        title: 'Instagram',
-        url: 'https://instagram.com/realvjy',
-        type: 'social',
-        icon: '/insta.svg',
-        on: true
-    },
-    {
-        title: 'Dribbble',
-        url: 'https://dribbble.com/realvjy',
-        type: 'social',
-        icon: '/dribbble.svg',
-        on: false
-    },
-    {
-        title: 'Medium',
-        url: 'https://medium.com/@realvjy',
-        type: 'social',
-        icon: '/medium.svg',
-        on: false
     },
     {
         title: 'Github',
-        url: 'https://github.com/realvjy',
+        url: 'https://github.com/zozores',
         type: 'social',
         icon: '/github.svg',
         on: true
     },
     {
-        title: 'Youtube',
-        url: 'https://youtube.com/realvjy',
+        title: 'Linkedin',
+        url: 'https://www.linkedin.com/in/tozores/',
         type: 'social',
-        icon: '/youtube.svg',
-        on: false
-    },
-    {
-        title: 'Figma',
-        url: 'https://figma.com/@realvjy',
-        type: 'social',
-        icon: '/figma.svg',
+        icon: '/linkedin.svg',
         on: true
     },
     {
-        title: 'Behance',
-        url: 'https://behance.net/realvjy',
-        type: 'social',
-        icon: '/behance.svg',
-        on: false
-    },
-    {
-        title: 'Linkedin',
-        url: 'https://www.linkedin.com/in/realvjy/',
-        type: 'social',
-        icon: '/linkedin.svg',
-        on: false
-    },
-    {
         title: 'Mastodon',
-        url: 'https://mastodon.online/@realvjy',
+        url: 'https://toot.ozor.es/zozo',
         type: 'social',
         icon: '/mastodon.svg',
         on: true
     },
     {
-        title: 'Hive Social',
-        url: 'https://www.hivesocial.app/?@realvjy',
+        title: 'Instagram',
+        url: 'https://instagram.com/zozorest',
         type: 'social',
-        icon: '/hive.svg',
-        on: false
+        icon: '/insta.svg',
+        on: true
     },
     {
-        title: 'Post',
-        url: 'https://www.post.news/realvjy',
+        title: 'Threads',
+        url: 'https://threads.net/zozorest',
         type: 'social',
-        icon: '/post.svg',
-        on: false
-    },
-    {
-        title: 'foundation',
-        url: 'https://vjy.me',
-        type: 'nft',
-        icon: '/foundation.svg',
-        on: false
-    },
-    {
-        title: 'opensea',
-        url: 'https://vjy.me',
-        type: 'nft',
-        icon: '/opensea.svg',
-        on: false
-    },
-    {
-        title: 'new collection',
-        url: 'https://vjy.me',
-        type: 'nft',
-        icon: '/opensea.svg',
-        on: false
-    },
-    // Install section
-    {
-        title: 'Use this template',
-        url: 'https://github.com/realvjy/nxt-lnk/generate',
-        type: 'install',
-        icon: '/use.png',
+        icon: '/threads.svg',
         on: true
     },
     {
-        title: 'Deploy on Vercel',
-        url: 'https://vercel.com/import/git?s=https://github.com/realvjy/nxt-lnk',
-        type: 'install',
-        icon: '/vercel.svg',
+        title: 'Bluesky',
+        url: 'https://bsky.app/profile/zozores.bsky.social',
+        type: 'social',
+        icon: '/bluesky.svg',
         on: true
     },
     {
-        title: 'Documentation',
-        url: 'https://github.com/realvjy/nxt-lnk#nxt-lnk',
-        type: 'install',
-        icon: '/doc.png',
+        title: 'Dev Community',
+        url: 'https://dev.to/zozores',
+        type: 'social',
+        icon: '/dev.svg',
         on: true
     },
     {
-        title: 'Github',
-        url: 'https://github.com/realvjy/nxt-lnk',
-        type: 'install',
-        icon: '/github-fill.svg',
+        title: 'Steam',
+        url: 'https://steamcommunity.com/id/zozorest',
+        type: 'social',
+        icon: '/steam.svg',
         on: true
     },
-
     {
-        title: 'Buy Me a Coffee',
-        url: 'https://www.buymeacoffee.com/realvjy',
-        type: 'other',
-        icon: '/bmc.png',
+        title: 'Newsletter',
+        url: 'https://news.ozor.es',
+        type: 'projects',
+        icon: '/newspaper.svg',
         on: true
     },
-
     {
-        title: 'link demo',
-        url: 'https://vjy.me/lnk',
-        type: 'other',
-        icon: '/vjy.png',
+        title: 'Quick Tips',
+        url: 'https://tips.ozor.es',
+        type: 'projects',
+        icon: '/bolt.svg',
         on: true
     },
-
     {
-        title: 'maker website',
-        url: 'https://vjy.me',
-        type: 'other',
-        icon: '/vjy.png',
+        title: 'Public Links',
+        url: 'https://links.ozor.es',
+        type: 'projects',
+        icon: '/links.svg',
         on: true
     },
 ];

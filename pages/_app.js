@@ -10,12 +10,12 @@ import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
 
 function MyApp({ Component, pageProps }) {
-    const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
+    const darkMode = useDarkMode(true)
     const [isMounted, setIsMounted] = useState(false)
 
-    // const [theme, setTheme] = useState(lightTheme)
+    //const [theme, setTheme] = useState(darkTheme)
     const theme = darkMode.value ? darkTheme : lightTheme;
-
+    
     useEffect(() => {
         setIsMounted(true);
     }, [])

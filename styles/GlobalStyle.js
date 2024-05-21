@@ -51,7 +51,7 @@ html{
     scroll-behavior: smooth;
 }
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   background: ${({ theme }) => theme.bg.primary};
   color: ${({ theme }) => theme.text.primary};
   text-rendering: optimizeLegibility;
@@ -96,6 +96,12 @@ a{
   transform: translate(-50%, -50%);
 }
 
+button {
+  background: ${({ theme }) => theme.bg.primary};
+  color: ${({ theme }) => theme.text.primary};
+  font-size: 24px;
+  float: right;
+}
    
 `;
 
